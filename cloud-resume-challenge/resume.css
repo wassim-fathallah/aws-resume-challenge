@@ -1,0 +1,56 @@
+body{
+    font-size:larger;
+    margin-left: 50px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    background-color: #bedcf4;
+    padding: 20px;
+}
+.contact{
+    margin-right: 500px;
+    text-align: right;
+}
+p{
+    margin-right: 20;
+        
+  }
+  h1{
+    display: inline-block;
+   white-space: nowrap; /* Prevents text from wrapping */
+   position: relative;
+   animation: continuous-move 5s linear infinite;
+   color: brown;
+  }
+  @keyframes continuous-move {
+    0% {
+       transform: translateX(-100%); /* Start off-screen on the left */
+    }
+    100% {
+       transform: translateX(100%); /* Move off-screen to the right */
+    }
+ }
+ .circle-image {
+    width: 200px; /* Set the desired size */
+    height: 200px; /* Make height equal to width for a perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fits the circular frame */
+    display: block; /* Optional: Ensures no extra space if it's inline */
+    animation: rotate 5s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* Complete a full rotation */
+    }
+  }
+  
+  .rotating-image:hover {
+    animation-play-state: paused; /* Stops the animation on hover */
+  }
+
+
